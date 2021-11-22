@@ -1,0 +1,16 @@
+
+body{
+  background: url(https://img.wallpapersafari.com/desktop/1600/900/41/42/gnSF4i.jpg);
+}
+
+.container2{
+  text-align: center;
+  color: white;
+}
+
+.my_img{
+  width:200px;
+  height:200px;
+  border-radius: 50%;
+  margin-top: 10px;
+}

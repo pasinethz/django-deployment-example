@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="base.css">-->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class='nav navbar-nav'>
+          <li><a class='navbar-brand' id='brand' href="{% url 'index' %}">Pasindu Aquarium</a></li>
+          <li><a class='navbar-brand' id ='admin' href="{% url 'admin:index' %}">Admin Page</a></li>
+          <li><a class='navbar-brand' href="{% url 'My_app:about' %}">About</a></li>
+          <li><a class='navbar-brand' href="{% url 'My_app:contact' %}">Contact</a></li>
+          <li><a class='navbar-brand' href="https://www.facebook.com"><img class='face' src="{% static 'other/facebook.png' %}" alt="None"></a></li>
+          <li><a class='navbar-brand' href='https://www.youtube.com'><img class='you' src="{% static 'other/youtube.png' %}" alt="None"></a></li>
+          <li><a class='navbar-brand' href="{% url 'My_app:register' %}">Registration</a></li>
+          {% if user.is_authenticated %}
+          <li><a class="navbar-brand" href="{% url 'logout' %}">Logout</a></li>
+          <li><a class='navbar-brand' href="{% url 'special' %}">Profile</a></li>
+          {% else %}
+          <li><a class='navbar-brand' href="{% url 'My_app:user_login' %}">Login</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      {% block content %}
+       <!-- something goes out of this block is inherited -->
+      {%  endblock %}
+
+
+    </div>
+
+  </body>
+</html>

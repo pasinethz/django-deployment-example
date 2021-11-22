@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'My_app/base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+
+<div class="jumbotron">
+<h1>Welcome to free Aquarium site</h1>
+<h2>Here's our site guid:</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+   labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+   nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+   esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+   in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+</div>
+<h1 class='a_p_heading'>Available Products</h1>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="#"><img class='index' src="{% static 'other/fishes.png' %}" alt=""></a></td><td><a href="#"><img class='index' src="{% static 'other/plants.png' %}" alt=""></a></td><td><a href="#"><img class='index' src="{% static 'other/soil.png' %}" alt=""></a></td><td><a href="#"><img class='index' src="{% static 'other/tools.png' %}" alt=""></a></td>
+    </tr>
+    <tr>
+      <td>Fishes</td><td>Plants</td><td>Soil</td><td>Tools</td>
+    </tr>
+    <tr>
+      <td><a href="#"><img class='index' src="{% static 'other/filters.png' %}" alt=""></a></td><td><a href="#"><img class='index' src="{% static 'other/tanks.png' %}" alt=""></a></td><td><a href="#"><img class='index' src="{% static 'other/green_auqa.jpg'%}" alt=""></a></td><td><a href="#"><img class='index' src="{% static 'other/rief_aqua.png' %}" alt=""></a></td>
+    </tr>
+    <tr>
+      <td>Filters</td><td>Tanks</td><td>Green Aqua</td><td>Reif Tank</td>
+    </tr>
+  </tbody>
+</table>
+ {% endblock %}
